@@ -18,4 +18,8 @@
  * Copyright: ~
  */
 
-define(function () { return window.Modernizr; });
+define(function () {
+
+	return window.Modernizr;
+	
+});
