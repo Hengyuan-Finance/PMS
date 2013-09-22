@@ -6,7 +6,7 @@
 
 > Original Author：张晓露（Doris），沈维忠（Tony）
 
-> Version：0.1.1
+> Version：0.1.2
 
 > Last Update：2013.09.21 00:21 ( Tony )
 
