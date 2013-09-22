@@ -15,4 +15,4 @@
 Problems?
 ----------
 
-If you have any questions, please [send e-mail](mailto:service@huitong-finance.com) to us.
+If you have any questions, please [send email](mailto:service@huitong-finance.com) to us.
