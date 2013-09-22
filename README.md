@@ -1,5 +1,3 @@
-![Logo](http://fenqimall.com/layout/zdinfo/Img/About/About_FenQi.png  "汇通分期商城")
-
 - - -
 
 > Describe：Huitong Instalment Store Partner Manager System, Just browser side.
