@@ -12,7 +12,12 @@
 
 - - -
 
+Updates
+-------
+2012/09/22/17:51 Update the README markdown file.
+
+
 Problems?
-----------
+---------
 
 If you have any questions, please [send email](mailto:service@huitong-finance.com) to us.
