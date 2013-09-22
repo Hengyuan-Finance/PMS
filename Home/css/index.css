@@ -1,0 +1,710 @@
+@charset "utf-8";
+
+
+/**
+ * Statement: Just shut the fuck up!In case you hadn’t noticed, I’m a bit of a stickler for terminology.You motherfucker!!!
+ * 
+ * Describe: The private stylesheet of partner mnager system, home page.
+ * 
+ * Further changes, comments: ~
+ * 
+ * Docs: ~
+ * 
+ * Original Author: Tony ( Shen Weizhong ).
+ * 
+ * Version: 0.1.1
+ * 
+ * Creation Date: 2013.09.09 6:48 ( Tony ).
+ * 
+ * Last update: 2013.09.13 0:31 ( Tony, -.-)zZ ), 
+ *
+ *     + Change the value of 'font-size' to 12px in '.ipt-username > input, .ipt-userpassword > input, .ipt-usercode > input' selectors;
+ *     
+ *     + Change the value of 'font-size' to 13px in '.enter-user, .enter-password, .enter-securityCode' selectors;
+ *     
+ *     + Change the value of 'height' and 'padding' to 17px and 5px in '.user-name, .user-password, .user-code' selectors.
+ * 
+ * License: ~
+ * 
+ * Copyright: ~
+ */
+
+
+
+/*
+ * 888888b.
+ * 888  "88b
+ * 888  .88P
+ * 8888888K.   8888b.  .d8888b   .d88b.
+ * 888  "Y88b     "88b 88K      d8P  Y8b
+ * 888    888 .d888888 "Y8888b. 88888888
+ * 888   d88P 888  888      X88 Y8b.
+ * 8888888P"  "Y888888  88888P'  "Y8888
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	
+	margin: 0;
+	
+	padding: 0;
+	
+	border: 0;
+	
+	font-size: 100%;
+	
+	font: inherit;
+	
+	vertical-align: baseline;
+	
+}
+
+body {
+	
+	line-height: 1;
+	
+}
+
+ol, ul {
+	
+	list-style: none;
+	
+}
+
+blockquote, q {
+	
+	quotes: none;
+	
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	
+	content: '';
+	
+	content: none;
+	
+}
+
+html, body {
+	
+	font: normal normal normal 12px/normal "宋体";
+	
+	display: block;
+	
+	width: 100%;
+	
+	height: auto;
+	
+	overflow: hidden;
+	
+	overflow-x: hidden;
+	
+	overflow-y: hidden;
+	
+	-webkit-tap-highlight-color: rgb(255,255,158);
+	
+	background-attachment: scroll;
+	
+	background-clip: border-box;
+	
+	-webkit-background-clip: border-box;
+	
+	-webkit-background-origin: padding-box;
+	
+	background-origin: padding-box;
+	
+	-webkit-background-size: auto;
+
+}
+
+
+
+/* 
+ * 888    888 888    d8b 888
+ * 888    888 888    Y8P 888
+ * 888    888 888        888
+ * 888    888 888888 888 888
+ * 888    888 888    888 888 .d8888b
+ * 888    888 888    888 888 88K
+ * 888    888 888    888 888 "Y8888b.
+ * Y88888888Y Y88b.  888 888      X88
+ *  "Y8888Y"   "Y888 888 888  8888P'
+ */
+
+.minHeight_250 {
+
+	min-height: 250px;
+	
+	height: auto !important;
+	
+	height: 250px;
+
+}
+
+.hide {
+	
+	display: none;
+	
+}
+
+.advanced-hide {
+	
+	visibility: hidden;
+	
+	display: none;
+	
+}
+
+.rela {
+	
+	position: relative;
+	
+}
+
+.absol {
+	
+	position: absolute;
+	
+}
+
+.left {
+	
+	float: left;
+	
+}
+
+.c_aaa {
+	
+	color: #aaa;
+	
+}
+
+.box-gradient {
+	
+	/* Old Browsers */
+	
+	background: #8a9aab;
+	
+	background: rgb(138,154,171);
+	
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhhOWFhYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzODUzNzEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	
+	/* FF3.6+ */
+	
+	background: -moz-linear-gradient(top, hsla(211,16%,61%,1) 0%, hsla(212,34%,33%,1) 100%);
+	
+	background: -moz-linear-gradient(top, hsl(211,16%,61%) 0%, hsl(212,34%,33%) 100%);
+	
+	background: -moz-linear-gradient(top, rgba(138,154,171,1) 0%, rgba(56,83,113,1) 100%);
+	
+	background: -moz-linear-gradient(top, rgb(138,154,171) 0%, rgb(56,83,113) 100%);
+	
+	background: -moz-linear-gradient(top, #8a9aab 0%, #385371 100%);
+	
+	/* Chrome, Safari4+ */
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(211,16%,61%,1)), color-stop(100%,hsla(212,34%,33%,1)));
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsl(211,16%,61%)), color-stop(100%,hsl(212,34%,33%)));
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(138,154,171,1)), color-stop(100%,rgba(56,83,113,1)));
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(138,154,171)), color-stop(100%,rgb(56,83,113)));
+	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8a9aab), color-stop(100%,#385371));
+	
+	/* Chrome10+, Safari5.1+ */
+	
+	background: -webkit-linear-gradient(top, hsla(211,16%,61%,1) 0%,hsla(212,34%,33%,1) 100%);
+	
+	background: -webkit-linear-gradient(top, hsl(211,16%,61%) 0%,hsl(212,34%,33%) 100%);
+	
+	background: -webkit-linear-gradient(top, rgba(138,154,171,1) 0%,rgba(56,83,113,1) 100%);
+	
+	background: -webkit-linear-gradient(top, rgb(138,154,171) 0%,rgb(56,83,113) 100%);
+	
+	background: -webkit-linear-gradient(top, #8a9aab 0%,#385371 100%);
+	
+	/* Opera 11.10+ */
+	
+	background: -o-linear-gradient(top, hsla(211,16%,61%,1) 0%,hsla(212,34%,33%,1) 100%);
+	
+	background: -o-linear-gradient(top, hsl(211,16%,61%) 0%,hsl(212,34%,33%) 100%);
+	
+	background: -o-linear-gradient(top, rgba(138,154,171,1) 0%,rgba(56,83,113,1) 100%);
+	
+	background: -o-linear-gradient(top, rgb(138,154,171) 0%,rgb(56,83,113) 100%);
+	
+	background: -o-linear-gradient(top, #8a9aab 0%,#385371 100%);
+	
+	/* IE10+ */
+	
+	background: -ms-linear-gradient(top, hsla(211,16%,61%,1) 0%,hsla(212,34%,33%,1) 100%); 
+	
+	background: -ms-linear-gradient(top, hsl(211,16%,61%) 0%,hsl(212,34%,33%) 100%);
+	
+	background: -ms-linear-gradient(top, rgba(138,154,171,1) 0%,rgba(56,83,113,1) 100%);
+	
+	background: -ms-linear-gradient(top, rgb(138,154,171) 0%,rgb(56,83,113) 100%);
+	
+	background: -ms-linear-gradient(top, #8a9aab 0%,#385371 100%);
+	
+	/* W3C */
+	
+	background: linear-gradient(to bottom, hsla(211,16%,61%,1) 0%,hsla(212,34%,33%,1) 100%); 
+	
+	background: linear-gradient(to bottom, hsl(211,16%,61%) 0%,hsl(212,34%,33%) 100%);
+	
+	background: linear-gradient(to bottom, rgba(138,154,171,1) 0%,rgba(56,83,113,1) 100%);
+	
+	background: linear-gradient(to bottom, rgb(138,154,171) 0%,rgb(56,83,113) 100%);
+	
+	background: linear-gradient(to bottom, #8a9aab 0%,#385371 100%);
+	
+	/* IE6-8 */
+	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a9aab', endColorstr='#385371', GradientType=0 );
+	
+}
+
+
+
+/* 
+ *  .d8888b.          d8b      888 
+ * d88P  Y88b         Y8P      888 
+ * 888    888                  888 
+ * 888        888d888 888  .d88888 
+ * 888  88888 888P"   888 d88" 888 
+ * 888    888 888     888 888  888 
+ * Y88b  d88P 888     888 Y88b 888 
+ *  "Y8888P88 888     888  "Y88888                                     
+ */
+
+.row {
+	
+	width: 100%;
+	
+	margin-left: auto;
+	
+	margin-right: auto;
+	
+	margin-top: 0;
+	
+	margin-bottom: 0;
+	
+	max-width: 980px;
+	
+	min-width: 980px;
+	
+	_width: 980px; /* Take that, IE6! */
+	
+	*zoom: 1;
+	
+}
+
+.row:before, .row:after {
+	
+	content:" ";
+	
+	display: table;
+	
+}
+
+.row:after {
+	
+	clear: both;
+	
+}
+
+.row .row {
+	
+	width: 100%;
+	
+	max-width: none;
+	
+	min-width: 0;
+	
+	margin: 0;
+	
+	*zoom: 1;
+	
+}
+
+.row .row:before, .row .row:after {
+	
+	content: " ";
+	
+	display: table;
+	
+}
+
+.row .row:after {
+	
+	clear: both;
+	
+}
+
+
+
+/* 
+ *  .d8888b.                         .d8888b.                   d8b 888
+ * d88P  Y88b                       d88P  Y88b                  Y8P 888
+ * 888    888                       Y88b.                           888
+ * 888        .d8888b  .d8888b       "Y888b.   88888b.  888d888 888 888888  .d88b.  .d8888b
+ * 888        88K      88K              "Y88b. 888 "88b 888P"   888 888    d8P  Y8b 88K
+ * 888    888 "Y8888b. "Y8888b.           "888 888  888 888     888 888    88888888 "Y8888b.
+ * Y88b  d88P      X88      X88     Y88b  d88P 888 d88P 888     888 Y88b.  Y8b.          X88
+ *  "Y8888P"   88888P'  88888P'      "Y8888P"  88888P"  888     888  "Y888  "Y8888   88888P'
+ *                                             888
+ *                                             888
+ *                                             888
+ */
+
+.logo, .illustration-login, .statement-login, .statement-site, .btn-login, .error-icon {
+	
+	background: url(../img/sprites.index.png) no-repeat;
+	
+}
+
+.logo {
+	
+	z-index: 2;
+	
+	background-position: 0 0;
+	
+	width: 149px;
+	
+	height: 46px;
+	
+	left: 34px;
+	
+}
+
+.illustration-login {
+	
+	background-position: 0 -50px;
+	
+	width: 448px;
+	
+	height: 401px;
+	
+}
+
+.statement-login {
+	
+	background-position: 0 -500px;
+	
+	width: 131px;
+	
+	height: 20px;
+	
+}
+
+.statement-site {
+	
+	z-index: 4;
+	
+	background-position: -200px 0;
+	
+	width: 144px;
+	
+	height: 46px;
+	
+	left: 237px;
+	
+}
+
+.btn-login {
+	
+	background-position: 0 -550px;
+	
+	width: 250px;
+	
+	height: 32px;
+	
+}
+
+.error-icon {
+	
+	background-position: -150px -500px;
+	
+	width: 16px;
+	
+	height: 16px;
+	
+}
+
+
+
+/* 
+ * 888    888                        888                  
+ * 888    888                        888                  
+ * 888    888                        888                  
+ * 8888888888  .d88b.   8888b.   .d88888  .d88b.  888d888 
+ * 888    888 d8P  Y8b     "88b d88" 888 d8P  Y8b 888P"   
+ * 888    888 88888888 .d888888 888  888 88888888 888     
+ * 888    888 Y8b.     888  888 Y88b 888 Y8b.     888     
+ * 888    888  "Y8888  "Y888888  "Y88888  "Y8888  888              
+ */
+
+header {
+	
+	z-index: 1;
+	
+	height: 64px;
+	
+	top: 58px;
+	
+}
+
+.line {
+	
+	z-index: 3;
+	
+	width: 1px;
+	
+	height:  44px;
+	
+	top: 2px;
+	
+	left: 218px;
+	
+	background-color: #e9461f;
+	
+}
+
+
+
+/* 
+ * 888                        d8b
+ * 888                        Y8P
+ * 888                           
+ * 888       .d88b.   .d88b.  888 88888b. 
+ * 888      d88""88b d88P"88b 888 888 "88b
+ * 888      888  888 888  888 888 888  888
+ * 888      Y88..88P Y88b 888 888 888  888
+ * 88888888  "Y88P"   "Y88888 888 888  888
+ *                        888
+ *                   Y8b d88P
+ *                     "Y88P"
+*/
+
+.login-panel {
+	
+	z-index: 5;
+
+	height: 537px;
+	
+	top: 58px;
+	
+}
+
+.panel-border-top {
+	
+	height: 2px;
+	
+	top: 0;
+	
+	background-color: #e9461f;
+	
+}
+
+.login-form {
+	
+	z-index: 7;
+	
+	width: 329px;
+	
+	top: 56px;
+	
+	left: 42px;
+	
+	border: 1px solid #CCC;
+	
+}
+
+.statement-login-area {
+	
+	width: 251px;
+	
+	height: 20px;
+	
+	margin: 32px 0 0 39px;
+	
+}
+
+.error-info {
+	
+	color: #666;
+	
+	width: 251px;
+	
+	height: 19px;
+	
+	margin: 38px 0 0 39px;
+	
+	padding: 3px 0 0 0;
+	
+	border: 1px solid #ff8080;
+	
+	background-color: #fff2f2;
+	
+}
+
+.error-info > div {
+	
+	margin: 0 0 0 5px;
+	
+}
+
+.error-info > span {
+	
+	margin: 1px 0 0 5px;
+	
+}
+
+.enter-user, .enter-password, .enter-securityCode {
+	
+	color: #666;
+	
+	text-align: right;
+	
+	font-size: 13px;
+	
+	line-height: 1;
+	
+	width: 251px;
+	
+	height: 22px;
+	
+	margin: 20px 0 0 39px;
+	
+}
+
+.user-name, .user-password, .user-code {
+	
+	height: 17px;
+	
+	width: 65px;
+	
+	padding: 5px 0 0 0;
+	
+}
+
+.ipt-username, .ipt-userpassword, .ipt-usercode {
+	
+	height: 22px;
+	
+	width: 186px;
+	
+}
+
+.ipt-username > input, .ipt-userpassword > input, .ipt-usercode > input {
+	
+	font-family: "微软雅黑";
+
+	font-size: 12px;
+	
+	line-height: 20px;
+	
+	height: 20px;
+	
+	margin: 0;
+	
+	padding: 0 5px 0 5px;
+	
+	border: 1px solid #bbb;
+	
+}
+
+.ipt-username > input, .ipt-userpassword > input {
+	
+	width: 176px;
+	
+}
+
+.ipt-usercode > input {
+	
+	width: 51px;
+	
+}
+
+.ipt-usercode > div {
+	
+	width: 75px;
+	
+	height: 22px;
+	
+	margin: 0 0 0 7px;
+	
+}
+
+.ipt-usercode > a {
+	
+	color: #004986;
+	
+	font: 12px/normal "新宋体";
+	
+	margin: 5px 0 0 5px;
+	
+	padding: 0;
+	
+}
+
+.btn-login {
+	
+	margin: 38px 0 40px 39px;
+	
+	border: 0;
+	
+}
+
+.illustration-login {
+	
+	z-index: 20;
+	
+	top: 52px;
+	
+	left: 560px;
+	
+}
+
+
+
+/* 
+ * 8888888888                   888                     
+ * 888                          888                     
+ * 888                          888                     
+ * 8888888     .d88b.   .d88b.  888888  .d88b.  888d888
+ * 888        d88""88b d88""88b 888    d8P  Y8b 888P"
+ * 888        888  888 888  888 888    88888888 888
+ * 888        Y88..88P Y88..88P Y88b.  Y8b.     888
+ * 888         "Y88P"   "Y88P"   "Y888  "Y8888  888
+ */
+
+footer {
+	
+	color: #666;
+	
+	text-align: center;
+	
+	height: 30px;
+	
+	padding: 16px 0 0 0;
+	
+	border-top: 1px solid #CCC;
+	
+	border-bottom: 1px solid #CCC;
+	
+}
